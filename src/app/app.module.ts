@@ -7,6 +7,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { NameComponent } from './name/name.component';
 import { CapitalcityComponent } from './capitalcity/capitalcity.component';
 import { CurrencyComponent } from './currency/currency.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CurrencyComponent } from './currency/currency.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
