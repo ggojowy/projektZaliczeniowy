@@ -8,6 +8,7 @@ import { NameComponent } from './name/name.component';
 import { CapitalcityComponent } from './capitalcity/capitalcity.component';
 import { CurrencyComponent } from './currency/currency.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
