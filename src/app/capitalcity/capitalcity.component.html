@@ -4,11 +4,11 @@
     <h2 class="uk-heading-small uk-margin-remove-top">Country search by capital city</h2>
     <div class="uk-form-stacked">
       <div class="uk-margin">
-        <input class="uk-input uk-border-rounded" type="text">
+        <input [(ngModel)]="capitalCity" class="uk-input uk-border-rounded" type="text">
       </div>
 
       <div class="uk-margin">
-        <button class="uk-button uk-button-primary uk-border-rounded uk-align-right uk-margin-remove-bottom">Search</button>
+        <button (click)="searchByCapitalCity()" class="uk-button uk-button-primary uk-border-rounded uk-align-right uk-margin-remove-bottom">Search</button>
       </div>
     </div>
   </div>
