@@ -19,6 +19,17 @@
           </li>
         </ul>
       </div>
+      <div class="uk-flex uk-flex-between uk-margin-large-top" *ngIf="countries.length >1">
+        <ul>
+          Please choose one of below results:<br/>
+          <li *ngFor="let item of countries; let i = index">
+
+            {{item.name}}
+
+
+          </li>
+        </ul>
+      </div>
 
     </div>
   </div>
