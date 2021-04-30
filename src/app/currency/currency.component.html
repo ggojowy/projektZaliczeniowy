@@ -10,6 +10,34 @@
       <div class="uk-margin">
         <button (click)="searchByCurrency()" class="uk-button uk-button-primary uk-border-rounded uk-align-right uk-margin-remove-bottom">Search</button>
       </div>
+      <div class="uk-flex uk-flex-between uk-margin-large-top" *ngIf="countries.length ==1">
+        <ul>
+          <li *ngFor="let item of countries; let i = index">
+            name: {{item.name}}
+            <br/>capital: {{item.capital}}
+            <br/>region: {{item.region}}
+            <br/>subregion: {{item.subregion}}
+            <br/>population: {{item.population}}
+            <br/>area: {{item.area}} square km
+            <br/>timezones: {{item.timezones}}
+            <br/>borders: {{item.borders}}
+            <br/>currencies: {{item.currencies}}
+            <br/>languages: {{item.languages}}
+
+          </li>
+        </ul>
+      </div>
+      <div class="uk-flex uk-flex-between uk-margin-large-top" *ngIf="countries.length >1">
+        <ul>
+          Please choose one of below results:<br/><br/>
+          <li *ngFor="let item of countries; let i = index">
+
+            {{item.name}}
+
+
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
