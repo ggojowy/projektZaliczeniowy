@@ -21,8 +21,14 @@
             <br/>area: {{item.area}} square km
             <br/>timezones: {{item.timezones}}
             <br/>borders: {{item.borders}}
-            <br/>currencies: {{item.currencies}}
-            <br/>languages: {{item.languages}}
+            <br/>currencies:
+            <span *ngFor="let currency of item.currencies">
+              {{currency.code}}
+            </span>
+            <br/>languages:
+            <span *ngFor="let language of item.languages">
+              {{language.name}}
+            </span>
 
           </li>
         </ul>

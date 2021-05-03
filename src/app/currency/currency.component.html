@@ -21,8 +21,14 @@
             <br/>area: {{item.area}} square km
             <br/>timezones: {{item.timezones}}
             <br/>borders: {{item.borders}}
-            <br/>currencies: {{item.currencies}}
-            <br/>languages: {{item.languages}}
+            <br/>currencies:
+            <span *ngFor="let currency of item.currencies">
+              {{currency.code}}
+            </span>
+            <br/>languages:
+            <span *ngFor="let language of item.languages">
+              {{language.name}}
+            </span>
 
           </li>
         </ul>
@@ -30,9 +36,9 @@
       <div class="uk-flex uk-flex-between uk-margin-large-top" *ngIf="countries.length >1">
         <ul>
           Please choose one of below results:<br/><br/>
-          <li *ngFor="let item of countries; let i = index">
+          <li *ngFor="let country of countries; let i = index">
 
-            {{item.name}}
+            <a (click)="chooseByCountry(country.name)">{{country.name}}</a>
 
 
           </li>

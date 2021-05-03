@@ -19,4 +19,7 @@ export class CurrencyComponent implements OnInit {
   searchByCurrency(): void {
     this.apiHttp.getCountriesCurrency(this.currency).subscribe((r: Country[]) => this.countries = r);
   }
+  chooseByCountry(name): void {
+   this.countries = this.countries.filter(x => x.name === name);
+  }
 }
