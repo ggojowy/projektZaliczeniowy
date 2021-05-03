@@ -19,4 +19,7 @@ export class NameComponent implements OnInit {
   searchByName(): void {
     this.apiHttp.getCountries(this.name).subscribe((r: Country[]) => this.countries = r);
   }
+  chooseByCountry(name): void {
+    this.countries = this.countries.filter(x => x.name === name);
+  }
 }

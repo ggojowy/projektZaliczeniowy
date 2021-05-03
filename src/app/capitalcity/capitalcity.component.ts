@@ -19,4 +19,7 @@ export class CapitalcityComponent implements OnInit {
   searchByCapitalCity(): void {
     this.apiHttp.getCountriesCapitalCity(this.capitalCity).subscribe((r: Country[]) => this.countries = r);
   }
+  chooseByCountry(name): void {
+    this.countries = this.countries.filter(x => x.name === name);
+  }
 }

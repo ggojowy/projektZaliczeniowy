@@ -35,10 +35,10 @@
       </div>
       <div class="uk-flex uk-flex-between uk-margin-large-top" *ngIf="countries.length >1">
         <ul>
-          Please type in the search field one of below results:<br/><br/>
-          <li *ngFor="let item of countries; let i = index">
+          Please choose of below results:<br/><br/>
+          <li *ngFor="let country of countries; let i = index">
 
-            {{item.capital}}
+            <a (click)="chooseByCountry(country.name)">{{country.name}}</a>
 
 
           </li>
